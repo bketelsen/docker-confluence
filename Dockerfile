@@ -37,6 +37,8 @@ RUN wget                    "http://www.atlassian.com/software/confluence/downlo
     && chmod -R 777         "/usr/local/atlassian/confluence/logs" \
     && chmod -R 777         "/usr/local/atlassian/confluence/work"
 
+ADD mysql-connector-java-5.1.32-bin.jar /usr/local/atlassian/confluence/lib/
+
 # set the principal user as new non-root confluence account
 USER confluence
 
